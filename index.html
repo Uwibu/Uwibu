@@ -3,10 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Olivia’s Window Cleaning — Nr. 1 in der Welt (Spielversion)</title>
-
+<title>Olivia’s Window Cleaning — Nr. 1 in der Welt</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
 <style>
   :root{
     --bg:#f4f9ff;
@@ -15,473 +13,103 @@
     --muted:#58646f;
     --radius:12px;
   }
-  *{box-sizing:border-box}
-  body{
-    margin:0;font-family:'Inter',system-ui,Segoe UI,Arial;
-    background:linear-gradient(180deg,var(--bg),#ffffff 60%);color:#08304b;
-  }
-
-  header{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:18px 24px;background:transparent;
-  }
+  body{margin:0;font-family:'Inter',system-ui;background:linear-gradient(180deg,var(--bg),#ffffff 60%);color:#08304b;}
+  header{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;}
   .brand{display:flex;gap:12px;align-items:center}
-  .logo{
-    width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#2aa1ff);
-    display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:20px;box-shadow:0 6px 18px rgba(3,60,76,0.08)
-  }
+  .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#2aa1ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:20px;}
   nav a{margin-left:16px;color:var(--muted);text-decoration:none;font-weight:600}
-
   .container{max-width:1100px;margin:12px auto;padding:0 18px}
-
-  .hero{
-    display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:start;margin-top:6px;
-  }
+  .hero{display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:start;margin-top:6px;}
   .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 10px 30px rgba(3,60,76,0.06)}
   h1{margin:0;font-size:30px}
   p.lead{color:var(--muted);margin-top:8px}
-
-  .cta-row{display:flex;gap:12px;margin-top:14px}
-  .btn{
-    background:linear-gradient(90deg,var(--accent),#2aa1ff);color:white;border:0;padding:12px 16px;border-radius:10px;font-weight:800;cursor:pointer;
-    box-shadow:0 8px 18px rgba(0,122,200,0.14)
-  }
-  .btn-ghost{background:transparent;border:1px solid #e6f2ff;padding:10px 14px;border-radius:10px;font-weight:700;color:var(--accent);cursor:pointer}
-
-  /* right column: certificate */
-  .cert {
-    display:flex;flex-direction:column;gap:12px;
-  }
-  .cert img{width:100%;border-radius:10px;object-fit:cover;display:block}
-  .cert .meta{font-size:14px;color:var(--muted)}
-
-  /* services */
   .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
-
-  /* interactive game panel */
-  .game {
-    display:grid;grid-template-columns:1fr 220px;gap:14px;align-items:start;
-  }
-  .window-card{position:relative;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,#eaf8ff,#ffffff);padding:14px}
-  .clean-area{width:100%;height:320px;border-radius:10px;box-shadow:inset 0 2px 6px rgba(0,0,0,0.06);position:relative;overflow:hidden;background:linear-gradient(180deg,#cfefff,#eaf7ff)}
-  .instructions{font-size:14px;color:var(--muted);margin-top:8px}
-
-  .progress{
-    height:12px;background:#eef;border-radius:8px;overflow:hidden;margin-top:8px;
-  }
-  .progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#28b0ff);width:0%}
-
-  footer{margin:28px auto 40px;text-align:center;color:var(--muted)}
-  @media (max-width:960px){
-    .hero{grid-template-columns:1fr;margin:0}
-    .game{grid-template-columns:1fr;gap:12px}
-    .cert{order:-1}
-  }
-
-  /* confetti */
-  .confetti{position:fixed;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:9999}
-  .confetti .piece{position:absolute;font-size:14px;transform:translateY(-120vh);opacity:0}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+  .gallery img{width:100%;border-radius:10px;object-fit:cover;box-shadow:0 6px 16px rgba(0,0,0,0.06)}
+  footer{text-align:center;margin:28px 0;color:var(--muted)}
 </style>
 </head>
 <body>
-
 <header>
   <div class="brand">
     <div class="logo">OF</div>
     <div>
       <div style="font-weight:800;font-size:16px">Olivia’s Window Cleaning</div>
-      <div style="font-size:12px;color:var(--muted)">Glasklar. Freundlich. Spielerisch.</div>
+      <div style="font-size:12px;color:var(--muted)">Glasklar. Freundlich. Professionell.</div>
     </div>
   </div>
-
   <nav>
     <a href="#services">Leistungen</a>
-    <a href="#spiel">Spiel</a>
+    <a href="#referenzen">Referenzen</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
 </header>
-
 <main class="container">
   <section class="hero">
     <div class="card">
-      <div style="display:flex;justify-content:space-between;align-items:start;gap:12px">
-        <div>
-          <h1>Saubere Fenster — professionell & kinderfreundlich</h1>
-          <p class="lead">Auf dieser Spielseite kann deine Tochter Kunden „reinigen“, Buchungen simulieren und kleine Missionen absolvieren. Realistisches Layout, aber kindgerecht — mit interaktiven Putzen.</p>
-        </div>
-      </div>
-
-      <div class="cta-row">
-        <button class="btn" onclick="scrollToId('spiel')">Zum Spiel</button>
-        <button class="btn-ghost" onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'})">Anfrage</button>
-      </div>
-
+      <h1>Saubere Fenster — professionell & freundlich</h1>
+      <p class="lead">Erstklassiger Fensterreinigungsservice für Zuhause und Büro. Jetzt mit frischen Foto‑Referenzen echter Glanzarbeiten.</p>
       <div class="grid-2">
-        <div class="card" style="margin-top:12px">
+        <div class="card">
           <h3>Unsere Leistungen</h3>
           <ul style="color:var(--muted);margin-top:8px">
-            <li>Standard: Fenster innen & außen</li>
+            <li>Fenster innen & außen</li>
             <li>Glanzpaket: Extra-Politur</li>
-            <li>Detektiv-Service: Spinnen & Kleckse entfernen</li>
-            <li>Spieltermine: Fantasie-Reinigung für Puppen & Spielhäuser</li>
+            <li>Rahmen- & Falzreinigung</li>
+            <li>Wintergärten & Glasfronten</li>
           </ul>
         </div>
-
-        <div class="card" style="margin-top:12px">
-          <h3>Preise (Spiel)</h3>
+        <div class="card">
+          <h3>Preise</h3>
           <table style="width:100%;margin-top:8px;border-collapse:collapse;color:var(--muted);font-weight:600">
-            <tr><td style="padding:8px;border-bottom:1px solid #f1f6fb">Mini-Wischer</td><td style="padding:8px;border-bottom:1px solid #f1f6fb;text-align:right">3 Sternchen</td></tr>
-            <tr><td style="padding:8px;border-bottom:1px solid #f1f6fb">Glanzpaket</td><td style="padding:8px;text-align:right">8 Sternchen</td></tr>
-            <tr><td style="padding:8px">Detektiv-Service</td><td style="padding:8px;text-align:right">12 Sternchen</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid #f1f6fb">Standard</td><td style="padding:8px;text-align:right">ab 12 € / Fenster</td></tr>
+            <tr><td style="padding:8px;border-bottom:1px solid #f1f6fb">Glanzpaket</td><td style="padding:8px;text-align:right">+ 5 €</td></tr>
+            <tr><td style="padding:8px">Rahmenreinigung</td><td style="padding:8px;text-align:right">ab 8 €</td></tr>
           </table>
-          <p style="margin-top:8px;color:var(--muted);font-size:13px"><em>Jede dritte Scheibe gratis (nur im Spiel).</em></p>
         </div>
       </div>
-
     </div>
-
-    <aside class="cert card" aria-label="Zertifikat">
-      <div style="display:flex;justify-content:space-between;align-items:center">
-        <div>
-          <div style="font-weight:800">Nr. 1 in der Welt</div>
-          <div style="font-size:12px;color:var(--muted)">Staatlich geprüft (Spiel)</div>
-        </div>
-        <div style="text-align:right;font-weight:800;color:var(--accent)">⭐️⭐️⭐️⭐️⭐️</div>
+    <aside class="card">
+      <div style="font-weight:800">Zertifiziert</div>
+      <div style="font-size:12px;color:var(--muted)">Sauberkeit & Qualität</div>
+      <div style="margin-top:12px">
+        <img src="olivia-cert.jpg" onerror="this.style.display='none'" style="width:100%;border-radius:10px">
       </div>
-
-      <!-- Zertifikat-Bild: optional. Leg das hochgeladene Foto als "olivia-cert.jpg" in den Ordner -->
-      <div style="border-radius:10px;overflow:hidden;margin-top:6px">
-        <img src="olivia-cert.jpg" alt="Zertifikat (wenn du das Foto lokal speicherst als olivia-cert.jpg wird es hier angezeigt)" onerror="this.style.display='none'">
-      </div>
-
-      <div class="meta">
-        <div><strong>Tel:</strong> 0176-PutzFee123</div>
-        <div style="margin-top:6px;color:var(--muted);font-size:13px">Öffnungszeiten (Spiel): 9:00–17:00</div>
+      <div style="margin-top:12px;color:var(--muted);font-size:13px">
+        <strong>Tel:</strong> 0176‑PutzFee123
       </div>
     </aside>
   </section>
 
-  <!-- INTERAKTIVES SPIEL -->
-  <section id="spiel" style="margin-top:18px">
+  <!-- REFERENZEN -->
+  <section id="referenzen" style="margin-top:24px">
     <div class="card">
-      <h2 style="margin:0 0 8px 0">Interaktives Fenster-Putzen</h2>
-      <p class="lead" style="margin-bottom:10px">Zieh mit der Maus oder dem Finger über die Scheibe, um Schmutz wegzurubbeln. Schaffst du es, 90% sauber zu bekommen? Dann gibt's Konfetti!</p>
-
-      <div class="game">
-        <div class="window-card">
-          <div class="clean-area" id="cleanArea" aria-label="Spielbereich: Fensterputzen">
-            <!-- Canvas wird per JS erzeugt -->
-          </div>
-
-          <div class="instructions">Tippe/ziehe hier, um zu wischen. Halte die Maus gedrückt oder nutze den Finger (auf Touchscreens).</div>
-          <div class="progress" aria-hidden="false" style="margin-top:8px"><i id="progBar" style="width:0%"></i></div>
-          <div style="display:flex;gap:8px;margin-top:10px">
-            <button class="btn" id="resetBtn">Neu starten</button>
-            <button class="btn-ghost" id="hintBtn">Tipp: grobe Bewegungen</button>
-          </div>
-        </div>
-
-        <div class="card" style="height:100%">
-          <h3 style="margin-top:0">Aufgaben & Erfolge</h3>
-          <ul style="color:var(--muted);margin-top:8px">
-            <li id="task1">Mission: 90% sauber (noch 90%)</li>
-            <li id="task2">Zeitrekord: —</li>
-          </ul>
-
-          <div style="margin-top:12px">
-            <strong>Belohnung:</strong>
-            <p style="margin:6px 0;color:var(--muted)">Wenn du die Mission schaffst, bekommst du ein Konfetti-Feuerwerk und den Titel <em>Glanz-Expertin</em> im Spiel.</p>
-          </div>
-        </div>
+      <h2>Referenzen — frisch geputzte Fenster</h2>
+      <p class="lead">Hier findest du fünf Beispielbilder für besonders schöne Reinigungsergebnisse.</p>
+      <div class="gallery">
+        <img src="IMG-20251108-WA0008.jpg" alt="Referenz 1" />
+        <img src="IMG-20251108-WA0000.jpg" alt="Referenz 2" />
+        <img src="IMG-20251108-WA0001.jpg" alt="Referenz 3" />
       </div>
     </div>
   </section>
 
   <!-- Kontakt -->
-  <section id="kontakt" style="margin-top:18px">
+  <section id="kontakt" style="margin-top:24px">
     <div class="card">
-      <h2 style="margin:0 0 8px 0">Kontakt / Anfrage (Spiel)</h2>
-      <p class="lead" style="margin-bottom:10px">Das Formular speichert nur lokal — perfekt fürs Rollenspiel.</p>
-
-      <form id="contactForm" onsubmit="event.preventDefault(); submitForm();">
-        <div style="display:flex;gap:8px">
-          <input id="name" placeholder="Name (Spieler/in)" style="flex:1;padding:10px;border-radius:8px;border:1px solid #eef">
-          <input id="phone" placeholder="Tel (optional)" style="width:180px;padding:10px;border-radius:8px;border:1px solid #eef">
+      <h2>Kontakt</h2>
+      <p class="lead">Schreib uns eine Nachricht — wir melden uns schnell zurück.</p>
+      <form style="margin-top:12px">
+        <div style="display:flex;gap:8px;margin-bottom:8px">
+          <input placeholder="Name" style="flex:1;padding:10px;border-radius:8px;border:1px solid #eef">
+          <input placeholder="Telefon" style="width:180px;padding:10px;border-radius:8px;border:1px solid #eef">
         </div>
-        <textarea id="msg" placeholder="Welche Fenster sollen gereinigt werden?" style="width:100%;min-height:80px;padding:10px;border-radius:8px;border:1px solid #eef;margin-top:8px"></textarea>
-
-        <div style="display:flex;gap:8px;margin-top:8px">
-          <button class="btn" type="submit">Anfrage absenden</button>
-          <button type="reset" class="btn-ghost">Zurücksetzen</button>
-        </div>
+        <textarea placeholder="Nachricht" style="width:100%;min-height:80px;padding:10px;border-radius:8px;border:1px solid #eef"></textarea>
+        <button class="btn" style="margin-top:12px;background:linear-gradient(90deg,var(--accent),#2aa1ff);color:white;border:0;padding:12px 16px;border-radius:10px;font-weight:800;cursor:pointer;">Absenden</button>
       </form>
-
-      <div id="formResp" style="margin-top:8px;font-weight:700;color:green;display:none">Danke! Anfrage gespeichert (lokal).</div>
     </div>
   </section>
-
 </main>
-
-<footer>
-  <div style="max-width:1100px;margin:0 auto">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-      <div style="color:var(--muted)">© Olivia’s Window Cleaning (Spielversion)</div>
-      <div style="color:var(--muted)">Made with ❤️ — Für fantasievolles Spielen</div>
-    </div>
-  </div>
-</footer>
-
-<!-- Confetti container -->
-<div class="confetti" id="confetti"></div>
-
-<script>
-/* Hilfsfunktionen */
-function scrollToId(id){document.getElementById(id).scrollIntoView({behavior:'smooth'});}
-
-/* ---------------------------
-   Interaktives Fenster-Putzen
-   ---------------------------
-   Wir erstellen zwei Canvas-Layer:
-   - Clean background (visual only)
-   - Dirt layer: gefüllt mit "Schmutz" (braunes halbtransparent), den wir beim Wischen wegradieren (clear)
-   - Fortschritt: Anteil der verbliebenen Schmutz-Pixel
-*/
-const cleanArea = document.getElementById('cleanArea');
-const progBar = document.getElementById('progBar');
-const task1 = document.getElementById('task1');
-let canvas, ctx, dirtData, W, H;
-let drawing=false;
-let lastPos = null;
-let startTime = null;
-let bestTime = null;
-
-function setupCanvas(){
-  // Aufräumen
-  cleanArea.innerHTML = '';
-  W = cleanArea.clientWidth;
-  H = cleanArea.clientHeight;
-
-  canvas = document.createElement('canvas');
-  canvas.width = W;
-  canvas.height = H;
-  canvas.style.width = '100%';
-  canvas.style.height = '100%';
-  canvas.setAttribute('role','img');
-  ctx = canvas.getContext('2d');
-
-  // Saubere Glas-Optik als Hintergrund (nur optisch)
-  const bg = document.createElement('div');
-  bg.style.position='absolute';
-  bg.style.left=0;bg.style.top=0;bg.style.right=0;bg.style.bottom=0;
-  bg.style.zIndex=0;
-  bg.style.background = 'linear-gradient(180deg, rgba(255,255,255,0.7), rgba(240,255,255,0.9))';
-  bg.style.backdropFilter = 'blur(0.6px)';
-  cleanArea.appendChild(bg);
-
-  // Schmutz layer: braun-grau halbtransparent füllen
-  ctx.fillStyle = 'rgba(120,80,40,0.85)';
-  ctx.fillRect(0,0,W,H);
-
-  // Zeichne einige "Flecken" (Ringe/kleckse) für realistischeren Look
-  for (let i=0;i<20;i++){
-    const x = Math.random()*W, y = Math.random()*H;
-    const r = 20 + Math.random()*80;
-    const g = ctx.createRadialGradient(x,y,1,x,y,r);
-    g.addColorStop(0,'rgba(160,120,70,0.55)');
-    g.addColorStop(0.6,'rgba(120,80,40,0.5)');
-    g.addColorStop(1,'rgba(80,50,30,0.0)');
-    ctx.fillStyle = g;
-    ctx.beginPath();
-    ctx.arc(x,y,r,0,Math.PI*2);
-    ctx.fill();
-  }
-
-  // eine leichte oberflächenstruktur (feine Linien)
-  ctx.globalAlpha = 0.06;
-  ctx.strokeStyle = '#000';
-  for (let i=0;i<40;i++){
-    ctx.beginPath();
-    ctx.moveTo(0, Math.random()*H);
-    ctx.bezierCurveTo(W*0.3, Math.random()*H, W*0.6, Math.random()*H, W, Math.random()*H);
-    ctx.stroke();
-  }
-  ctx.globalAlpha = 1;
-
-  cleanArea.appendChild(canvas);
-
-  dirtData = ctx.getImageData(0,0,W,H);
-
-  // Events
-  canvas.addEventListener('pointerdown', onPointerDown);
-  canvas.addEventListener('pointermove', onPointerMove);
-  window.addEventListener('pointerup', onPointerUp);
-
-  // Touch friendly:
-  canvas.style.touchAction = 'none';
-
-  updateProgress();
-  startTime = Date.now();
-}
-
-function onPointerDown(e){
-  drawing = true;
-  lastPos = getPos(e);
-  if (!startTime) startTime = Date.now();
-}
-function onPointerMove(e){
-  if (!drawing) return;
-  const pos = getPos(e);
-  eraseLine(lastPos, pos);
-  lastPos = pos;
-}
-function onPointerUp(e){
-  if (!drawing) return;
-  drawing = false;
-  updateProgress();
-  checkComplete();
-}
-function getPos(e){
-  const rect = canvas.getBoundingClientRect();
-  return {x: (e.clientX - rect.left) * (canvas.width/rect.width), y: (e.clientY - rect.top) * (canvas.height/rect.height)};
-}
-function eraseLine(p1, p2){
-  const dist = Math.hypot(p2.x - p1.x, p2.y - p1.y) || 1;
-  const steps = Math.ceil(dist / 4);
-  for (let i=0;i<=steps;i++){
-    const t = i/steps;
-    const x = p1.x + (p2.x - p1.x)*t;
-    const y = p1.y + (p2.y - p1.y)*t;
-    eraseCircle(x,y, 24 + Math.random()*16);
-  }
-  // sofort sichtbar machen
-  ctx.putImageData(dirtData,0,0);
-}
-
-function eraseCircle(cx, cy, r){
-  const x0 = Math.max(0, Math.floor(cx - r));
-  const x1 = Math.min(W-1, Math.ceil(cx + r));
-  const y0 = Math.max(0, Math.floor(cy - r));
-  const y1 = Math.min(H-1, Math.ceil(cy + r));
-  for (let y=y0;y<=y1;y++){
-    for (let x=x0;x<=x1;x++){
-      const dx = x - cx, dy = y - cy;
-      if (dx*dx + dy*dy <= r*r){
-        const idx = (y*W + x) * 4 + 3; // alpha channel
-        // set alpha to 0 (transparent) - so the dirt disappears
-        dirtData.data[idx] = 0;
-      }
-    }
-  }
-}
-
-function updateProgress(){
-  const pixels = dirtData.data;
-  let total = pixels.length / 4;
-  let remaining = 0;
-  for (let i=3;i<pixels.length;i+=4){
-    if (pixels[i] > 16) remaining++;
-  }
-  const percentClean = Math.round((1 - remaining / total) * 100);
-  progBar.style.width = percentClean + '%';
-  const left = Math.max(0, 90 - percentClean);
-  task1.textContent = `Mission: 90% sauber (noch ${left}%)`;
-  return percentClean;
-}
-
-function checkComplete(){
-  const percent = updateProgress();
-  if (percent >= 90){
-    missionComplete();
-  }
-}
-
-function missionComplete(){
-  const elapsed = Math.round((Date.now() - startTime)/1000);
-  const tEl = document.getElementById('task2');
-  if (!bestTime || elapsed < bestTime) bestTime = elapsed;
-  tEl.textContent = `Zeitrekord: ${bestTime}s`;
-  // Konfetti
-  launchConfetti();
-  // kleine Meldung
-  showTemporaryMessage('Mission erfüllt! Titel: Glanz-Expertin 🏅', 3500);
-}
-
-/* Reset */
-document.getElementById('resetBtn').addEventListener('click', ()=>{
-  setupCanvas();
-  startTime = Date.now();
-});
-
-/* Tipp */
-document.getElementById('hintBtn').addEventListener('click', ()=>{
-  showTemporaryMessage('Tipp: große, grobe Bewegungen putzen schneller!',3000);
-});
-
-/* Kontaktformular: lokal speichern (localStorage) */
-function submitForm(){
-  const name = document.getElementById('name').value || 'Unbekannt';
-  const phone = document.getElementById('phone').value || '';
-  const msg = document.getElementById('msg').value || '';
-  const entry = {name,phone,msg,time:new Date().toISOString()};
-  let arr = JSON.parse(localStorage.getItem('owc_requests') || '[]');
-  arr.push(entry);
-  localStorage.setItem('owc_requests', JSON.stringify(arr));
-  document.getElementById('formResp').style.display='block';
-  setTimeout(()=> document.getElementById('formResp').style.display='none',3000);
-}
-
-/* kleine UI Nachricht */
-function showTemporaryMessage(text, ms){
-  const el = document.createElement('div');
-  el.style.position='fixed';
-  el.style.right='18px';
-  el.style.top='18px';
-  el.style.background='linear-gradient(90deg,#ffffff,#f0fbff)';
-  el.style.border='1px solid #e6f7ff';
-  el.style.padding='10px 14px';
-  el.style.boxShadow='0 8px 20px rgba(3,60,76,0.08)';
-  el.style.borderRadius='10px';
-  el.style.fontWeight='700';
-  el.style.zIndex=9999;
-  el.textContent = text;
-  document.body.appendChild(el);
-  setTimeout(()=> el.remove(), ms || 2000);
-}
-
-/* KONFETTI */
-function launchConfetti(){
-  const container = document.getElementById('confetti');
-  const emojis = ['✨','🎉','⭐️','🧽','💦'];
-  for (let i=0;i<40;i++){
-    const p = document.createElement('div');
-    p.className = 'piece';
-    p.textContent = emojis[Math.floor(Math.random()*emojis.length)];
-    p.style.left = Math.random()*100 + '%';
-    p.style.fontSize = (12 + Math.random()*22) + 'px';
-    p.style.transition = 'transform 1500ms ease-in, opacity 1500ms';
-    container.appendChild(p);
-    // animate
-    setTimeout(()=>{
-      p.style.transform = `translateY(${100 + Math.random()*100}vh) rotate(${Math.random()*720-360}deg)`;
-      p.style.opacity = '1';
-    }, 50 + Math.random()*300);
-    setTimeout(()=> p.style.opacity='0', 1300 + Math.random()*300);
-    setTimeout(()=> p.remove(), 2000 + Math.random()*800);
-  }
-}
-
-/* Init */
-window.addEventListener('load', ()=>{
-  setupCanvas();
-});
-
-/* Responsive: Canvas neu anpassen bei Resize */
-let resizeTimer=null;
-window.addEventListener('resize', ()=>{
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(()=> setupCanvas(), 220);
-});
-</script>
-
+<footer>© Olivia’s Window Cleaning</footer>
 </body>
 </html>

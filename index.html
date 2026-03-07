@@ -4,179 +4,314 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Olivia’s Home Improvements — Nr. 1 in der Welt</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
 <style>
-  :root{
-    --bg:#f4f9ff;
-    --card:#ffffff;
-    --accent:#0077c8;
-    --muted:#58646f;
-    --radius:12px;
-  }
-  body{margin:0;font-family:'Inter',system-ui;background:linear-gradient(180deg,var(--bg),#ffffff 60%);color:#08304b;}
-  header{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;}
-  .brand{display:flex;gap:12px;align-items:center}
-  .logo-img{width:60px;height:auto;border-radius:10px;}
-  nav a{margin-left:16px;color:var(--muted);text-decoration:none;font-weight:600}
-  .container{max-width:1100px;margin:12px auto;padding:0 18px}
-  .hero{display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:start;margin-top:6px;}
-  .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 10px 30px rgba(3,60,76,0.06)}
-  h1{margin:0;font-size:30px}
-  p.lead{color:var(--muted);margin-top:8px}
-  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
-  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
-  .gallery img{width:100%;border-radius:10px;object-fit:cover;box-shadow:0 6px 16px rgba(0,0,0,0.06)}
-  footer{text-align:center;margin:28px 0;color:var(--muted)}
-  .new-badge{display:inline-block;background:#ff3b3b;color:white;font-weight:800;padding:4px 10px;border-radius:8px;margin-right:8px;font-size:14px}
+:root{
+--bg:#f4f9ff;
+--card:#ffffff;
+--accent:#0077c8;
+--muted:#58646f;
+--radius:12px;
+}
+
+body{
+margin:0;
+font-family:'Inter',system-ui;
+background:linear-gradient(180deg,var(--bg),#ffffff 60%);
+color:#08304b;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 24px;
+}
+
+.brand{
+display:flex;
+gap:12px;
+align-items:center
+}
+
+.logo-img{
+width:140px;
+height:auto;
+}
+
+nav a{
+margin-left:16px;
+color:var(--muted);
+text-decoration:none;
+font-weight:600
+}
+
+.container{
+max-width:1100px;
+margin:12px auto;
+padding:0 18px
+}
+
+.hero{
+display:grid;
+grid-template-columns:1fr 420px;
+gap:20px;
+align-items:start;
+margin-top:6px;
+}
+
+.card{
+background:var(--card);
+border-radius:var(--radius);
+padding:18px;
+box-shadow:0 10px 30px rgba(3,60,76,0.06)
+}
+
+h1{
+margin:0;
+font-size:30px
+}
+
+p.lead{
+color:var(--muted);
+margin-top:8px
+}
+
+.grid-2{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+margin-top:18px
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:16px;
+margin-top:18px
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+object-fit:cover;
+box-shadow:0 6px 16px rgba(0,0,0,0.06)
+}
+
+footer{
+text-align:center;
+margin:28px 0;
+color:var(--muted)
+}
 </style>
 </head>
+
 <body>
 
 <header>
-  <div class="brand">
-    <img class="logo-img" src="Logo.png" alt="Logo">
-    <div>
-      <div style="font-weight:800;font-size:16px">Olivia’s Home Improvements</div>
-      <div style="font-size:12px;color:var(--muted)">Reinigung. Pflege. Verschönerung. Spezialisiert auf Fenster.</div>
-    </div>
-  </div>
 
-  <nav>
-    <a href="#services">Leistungen</a>
-    <a href="#referenzen">Referenzen</a>
-    <a href="#qualitaet">Qualität</a>
-    <a href="#kontakt">Kontakt</a>
-  </nav>
+<div class="brand">
+
+<img class="logo-img" src="ohi-logo.png" alt="Olivia’s Home Improvements Logo">
+
+<div>
+<div style="font-weight:800;font-size:16px">Olivia’s Home Improvements</div>
+<div style="font-size:12px;color:var(--muted)">Reinigung. Pflege. Verschönerung. Spezialisiert auf Fenster.</div>
+</div>
+
+</div>
+
+<nav>
+<a href="#services">Leistungen</a>
+<a href="#referenzen">Referenzen</a>
+<a href="#qualitaet">Qualität</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+
 </header>
 
 <main class="container">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="card">
-      <h1>Saubere Fenster — professionell & freundlich</h1>
-      <p class="lead">Erstklassige Fenster- & Hauspflege für Zuhause und Büro. Jetzt mit frischen Foto-Referenzen echter Glanzarbeiten.</p>
+<section class="hero">
 
-      <div class="grid-2">
-        <div class="card">
-          <h3>Unsere Leistungen</h3>
-          <ul style="color:var(--muted);margin-top:8px">
-            <li>Fenster innen & außen</li>
-            <li>Glanzpaket: Extra-Politur</li>
-            <li>Rahmen- & Falzreinigung</li>
-            <li>Wintergärten & Glasfronten</li>
-          </ul>
-        </div>
+<div class="card">
 
-        <div class="card">
-          <h3>Preise</h3>
-          <table style="width:100%;margin-top:8px;border-collapse:collapse;color:var(--muted);font-weight:600">
-            <tr>
-              <td style="padding:8px;border-bottom:1px solid #f1f6fb">Standard</td>
-              <td style="padding:8px;text-align:right">ab 1 € / Fenster</td>
-            </tr>
-            <tr>
-              <td style="padding:8px;border-bottom:1px solid #f1f6fb">Glanzpaket</td>
-              <td style="padding:8px;text-align:right">+ 0,50 €</td>
-            </tr>
-            <tr>
-              <td style="padding:8px">Rahmenreinigung</td>
-              <td style="padding:8px;text-align:right">ab 0,80 €</td>
-            </tr>
-          </table>
-        </div>
-      </div>
-    </div>
+<h1>Saubere Fenster — professionell & freundlich</h1>
 
-    <aside class="card">
-      <div style="font-weight:800">Zertifiziert</div>
-      <div style="font-size:12px;color:var(--muted)">Sauberkeit & Qualität</div>
-      <div style="margin-top:12px">
-        <img src="olivia-cert.jpg" onerror="this.style.display='none'" style="width:100%;border-radius:10px">
-      </div>
-      <div style="margin-top:12px;color:var(--muted);font-size:13px"><strong>Tel:</strong> 0176-PutzFee123</div>
-    </aside>
-  </section>
+<p class="lead">
+Erstklassige Fenster- & Hauspflege für Zuhause und Büro. Jetzt mit frischen Foto-Referenzen echter Glanzarbeiten.
+</p>
 
-  <!-- REFERENZEN -->
-  <section id="referenzen" style="margin-top:24px">
-    <div class="card">
-      <h2>Referenzen — frisch geputzte Fenster</h2>
-      <p class="lead">Hier findest du Foto-Beispiele für besonders schöne Reinigungsergebnisse.</p>
-      <div class="gallery">
-        <img src="IMG-20251108-WA0008.jpg" alt="Referenz 1" />
-        <img src="IMG-20251108-WA0000.jpg" alt="Referenz 2" />
-        <img src="IMG-20251108-WA0001.jpg" alt="Referenz 3" />
-      </div>
-    </div>
-  </section>
+<div class="grid-2">
 
-  <!-- ORCHIDEEN -->
-  <section id="orchideen" style="margin-top:24px">
-    <div class="card">
-      <span class="new-badge">NEU</span>
-      <h2 style="display:inline-block;vertical-align:middle">Achtung nur für kurze Zeit: Orchideen wässern</h2>
-      <p class="lead">Professionelles Orchideen-Wässern — nur 0,50 EUR pro Stück.</p>
+<div class="card">
 
-      <div style="text-align:center;margin-top:18px;">
-        <img src="9b3c858b-c224-4a69-9ae3-897c1892c8d3.png" alt="Orchideenblüte" style="max-width:100%;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.08);">
-      </div>
-    </div>
-  </section>
+<h3>Unsere Leistungen</h3>
 
-  <!-- WEIHNACHTSDEKORATION -->
-  <section id="weihnachten" style="margin-top:24px">
-    <div class="card">
-      <span class="new-badge">NEU</span>
-      <h2 style="display:inline-block;vertical-align:middle">Nur für kurze Zeit: Weihnachtsdekoration</h2>
-      <p class="lead">Egal was – wir sind immer parat. Mit weihnachtlichen Preisen.</p>
+<ul style="color:var(--muted);margin-top:8px">
+<li>Fenster innen & außen</li>
+<li>Glanzpaket: Extra-Politur</li>
+<li>Rahmen- & Falzreinigung</li>
+<li>Wintergärten & Glasfronten</li>
+</ul>
 
-      <div style="text-align:center; margin-top:18px;">
-        <img 
-          src="weihnachtliche-wohnung.png"
-          alt="Weihnachtlich dekorierte Wohnung"
-          style="max-width:70%; border-radius:12px; box-shadow:0 10px 26px rgba(0,0,0,0.08);"
-        >
-      </div>
-    </div>
-  </section>
+</div>
 
-  <!-- ERDMÄNNCHEN -->
-  <section id="qualitaet" style="margin-top:24px">
-    <div class="card">
-      <h2>Erdmännchen – Qualitätsbotschafter</h2>
-      <p class="lead">Unsere drei Erdmännchen achten auf jedes Detail – für perfekte Fensterreinigung.</p>
+<div class="card">
 
-      <div style="text-align:center; margin-top:20px;">
-        <img 
-          src="erdmaenchen.png"
-          alt="Erdmännchen Qualitätsbotschafter"
-          style="max-width:100%; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.08);"
-        >
-      </div>
-    </div>
-  </section>
+<h3>Preise</h3>
 
-  <!-- KONTAKT -->
-  <section id="kontakt" style="margin-top:24px">
-    <div class="card">
-      <h2>Kontakt</h2>
-      <p class="lead">Schreib uns eine Nachricht — wir melden uns schnell zurück.</p>
+<table style="width:100%;margin-top:8px;border-collapse:collapse;color:var(--muted);font-weight:600">
 
-      <form style="margin-top:12px">
-        <div style="display:flex;gap:8px;margin-bottom:8px">
-          <input placeholder="Name" style="flex:1;padding:10px;border-radius:8px;border:1px solid #eef">
-          <input placeholder="Telefon" style="width:180px;padding:10px;border-radius:8px;border:1px solid #eef">
-        </div>
-        <textarea placeholder="Nachricht" style="width:100%;min-height:80px;padding:10px;border-radius:8px;border:1px solid #eef"></textarea>
-        <button class="btn" style="margin-top:12px;background:linear-gradient(90deg,var(--accent),#2aa1ff);color:white;border:0;padding:12px 16px;border-radius:10px;font-weight:800;cursor:pointer;">Absenden</button>
-      </form>
-    </div>
-  </section>
+<tr>
+<td style="padding:8px;border-bottom:1px solid #f1f6fb">Standard</td>
+<td style="padding:8px;text-align:right">ab 1 € / Fenster</td>
+</tr>
+
+<tr>
+<td style="padding:8px;border-bottom:1px solid #f1f6fb">Glanzpaket</td>
+<td style="padding:8px;text-align:right">+ 0,50 €</td>
+</tr>
+
+<tr>
+<td style="padding:8px">Rahmenreinigung</td>
+<td style="padding:8px;text-align:right">ab 0,80 €</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+<aside class="card">
+
+<div style="font-weight:800">Zertifiziert</div>
+<div style="font-size:12px;color:var(--muted)">Sauberkeit & Qualität</div>
+
+<div style="margin-top:12px">
+<img src="olivia-cert.jpg" onerror="this.style.display='none'" style="width:100%;border-radius:10px">
+</div>
+
+<div style="margin-top:12px;color:var(--muted);font-size:13px">
+<strong>Tel:</strong> 0176-PutzFee123
+</div>
+
+</aside>
+
+</section>
+
+<section id="referenzen" style="margin-top:24px">
+
+<div class="card">
+
+<h2>Referenzen — frisch geputzte Fenster</h2>
+
+<p class="lead">
+Hier findest du Foto-Beispiele für besonders schöne Reinigungsergebnisse.
+</p>
+
+<div class="gallery">
+
+<img src="IMG-20251108-WA0008.jpg" alt="Referenz 1" />
+<img src="IMG-20251108-WA0000.jpg" alt="Referenz 2" />
+<img src="IMG-20251108-WA0001.jpg" alt="Referenz 3" />
+
+</div>
+
+</div>
+
+</section>
+
+<section id="orchideen" style="margin-top:24px">
+
+<div class="card">
+
+<h2>Orchideen wässern</h2>
+
+<p class="lead">
+Professionelles Orchideen-Wässern — nur 0,50 EUR pro Stück.
+</p>
+
+<div style="text-align:center;margin-top:18px;">
+
+<img
+src="9b3c858b-c224-4a69-9ae3-897c1892c8d3.png"
+alt="Orchideenblüte"
+style="max-width:100%;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.08);"
+>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="qualitaet" style="margin-top:24px">
+
+<div class="card">
+
+<h2>Erdmännchen – Qualitätsbotschafter</h2>
+
+<p class="lead">
+Unsere drei Erdmännchen achten auf jedes Detail – für perfekte Fensterreinigung.
+</p>
+
+<div style="text-align:center; margin-top:20px;">
+
+<img
+src="erdmaenchen.png"
+alt="Erdmännchen Qualitätsbotschafter"
+style="max-width:100%; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.08);"
+>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="kontakt" style="margin-top:24px">
+
+<div class="card">
+
+<h2>Kontakt</h2>
+
+<p class="lead">
+Schreib uns eine Nachricht — wir melden uns schnell zurück.
+</p>
+
+<form style="margin-top:12px">
+
+<div style="display:flex;gap:8px;margin-bottom:8px">
+
+<input placeholder="Name" style="flex:1;padding:10px;border-radius:8px;border:1px solid #eef">
+
+<input placeholder="Telefon" style="width:180px;padding:10px;border-radius:8px;border:1px solid #eef">
+
+</div>
+
+<textarea placeholder="Nachricht" style="width:100%;min-height:80px;padding:10px;border-radius:8px;border:1px solid #eef"></textarea>
+
+<button style="margin-top:12px;background:linear-gradient(90deg,#0077c8,#2aa1ff);color:white;border:0;padding:12px 16px;border-radius:10px;font-weight:800;cursor:pointer;">
+Absenden
+</button>
+
+</form>
+
+</div>
+
+</section>
 
 </main>
 
-<footer>© Olivia’s Home Improvements</footer>
+<footer>
+© Olivia’s Home Improvements
+</footer>
 
 </body>
 </html>
